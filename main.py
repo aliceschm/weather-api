@@ -21,7 +21,7 @@ def get_forecast(location):
     #get request
     response = get(url, params=params)
 
-    #convert response to json
+    #convert response to json only if status code is 200
     if response.status_code == 200:
         json_response = response.json()
         #pprint.pprint(json_response) #pprint lib for better visualization of response
